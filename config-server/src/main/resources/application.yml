@@ -1,0 +1,5 @@
+server:
+    port: 9443
+#logging:
+#    level:
+#        root: DEBUG

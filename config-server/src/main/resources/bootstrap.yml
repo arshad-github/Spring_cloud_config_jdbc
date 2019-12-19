@@ -1,0 +1,15 @@
+## use for connecting via jdbc
+spring:
+  profiles:
+    active: jdbc
+  cloud:
+    config:
+      server:
+        jdbc:
+          sql: "SELECT properties.key, properties.value from properties where application=? and profile=? and label=?"
+          order: 1
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: "org.postgresql.Driver"
